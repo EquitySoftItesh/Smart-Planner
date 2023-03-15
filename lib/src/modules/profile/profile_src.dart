@@ -36,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
           children: [
             Center(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/ring.png'),
                     ),
@@ -48,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
                 width: Get.width,
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 80,
                     ),
                     const CircleAvatar(
@@ -85,7 +85,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: SingleChildScrollView(
                   child: Column(
@@ -328,7 +328,46 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       ListTile(
                         onTap: () {
-                          AuthController.authInstance.signOut();
+                          showDialog(
+                            context: context,
+                            builder: (_) => AlertDialog(
+                              title: Text(
+                                'Do you really want to exit?',
+                                style: GoogleFonts.raleway(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              actions: [
+                                TextButton(
+                                  onPressed: () {
+                                    Get.back();
+                                  },
+                                  child: Text(
+                                    'CANCEL',
+                                    style: GoogleFonts.raleway(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 15,
+                                        color: const Color.fromRGBO(
+                                            0, 188, 212, 1)),
+                                  ),
+                                ),
+                                TextButton(
+                                  onPressed: () {
+                                    AuthController.authInstance.signOut();
+                                  },
+                                  child: Text(
+                                    'ACCEPT',
+                                    style: GoogleFonts.raleway(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 15,
+                                        color: const Color.fromRGBO(
+                                            0, 188, 212, 1)),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
                         },
                         title: Text(
                           'Logout',
