@@ -61,7 +61,8 @@ class CommunityScreen extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                labelColor: Colors.black,
+                labelColor: const Color.fromRGBO(0, 125, 141, 1),
+                unselectedLabelColor: Colors.black,
                 indicatorSize: TabBarIndicatorSize.tab,
                 indicatorPadding: const EdgeInsets.only(bottom: 5),
                 indicator: CircleTabIndicator(
