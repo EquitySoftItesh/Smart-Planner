@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "680811055144",
+    "project_id": "smartplanner-a476d",
+    "storage_bucket": "smartplanner-a476d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680811055144:android:e81f215ba34a2ae81d0d1d",
+        "android_client_info": {
+          "package_name": "com.equitysoft.smartplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "680811055144-0482mjggva2bc9fno7oblf82dfes80ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsrkNv3i8fMiD5UwB5lFwkDNlEe9bSC2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "680811055144-0482mjggva2bc9fno7oblf82dfes80ff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
