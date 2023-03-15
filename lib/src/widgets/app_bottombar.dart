@@ -259,7 +259,10 @@ class BottomBarInActiveItem extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: kIconSize, width: kIconSize, child: itemWidget),
+            SizedBox(
+              height: 10,
+            ),
+            SizedBox(height: kIconSize, child: itemWidget),
             if (label != null && showLabel) ...[
               const SizedBox(height: 5.0),
               Text(

@@ -39,16 +39,13 @@ class HomeScreen extends StatelessWidget {
           itemLabelStyle: const TextStyle(fontSize: 10),
           bottomBarItems: [
             BottomBarItem(
-              inActiveItem: FittedBox(
-                fit: BoxFit.none,
-                child: Text(
-                  'Home',
-                  style: GoogleFonts.raleway(
-                    textStyle: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF005E6A),
-                    ),
+              inActiveItem: Text(
+                'Home',
+                style: GoogleFonts.raleway(
+                  textStyle: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF005E6A),
                   ),
                 ),
               ),
@@ -58,16 +55,13 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             BottomBarItem(
-              inActiveItem: FittedBox(
-                fit: BoxFit.none,
-                child: Text(
-                  'Community',
-                  style: GoogleFonts.raleway(
-                    textStyle: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF005E6A),
-                    ),
+              inActiveItem: Text(
+                'Community',
+                style: GoogleFonts.raleway(
+                  textStyle: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF005E6A),
                   ),
                 ),
               ),
@@ -81,16 +75,13 @@ class HomeScreen extends StatelessWidget {
               itemLabel: 'Community',
             ),
             BottomBarItem(
-              inActiveItem: FittedBox(
-                fit: BoxFit.none,
-                child: Text(
-                  'Shop',
-                  style: GoogleFonts.raleway(
-                    textStyle: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF005E6A),
-                    ),
+              inActiveItem: Text(
+                'Shop',
+                style: GoogleFonts.raleway(
+                  textStyle: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF005E6A),
                   ),
                 ),
               ),
@@ -103,16 +94,13 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             BottomBarItem(
-              inActiveItem: FittedBox(
-                fit: BoxFit.none,
-                child: Text(
-                  'Profile',
-                  style: GoogleFonts.raleway(
-                    textStyle: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF005E6A),
-                    ),
+              inActiveItem: Text(
+                'Profile',
+                style: GoogleFonts.raleway(
+                  textStyle: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF005E6A),
                   ),
                 ),
               ),
