@@ -46,6 +46,7 @@ class CreatePost extends StatelessWidget {
             child: const Icon(
               Icons.arrow_back_ios,
               color: Colors.black,
+              size: 20,
             ),
           ),
         ),

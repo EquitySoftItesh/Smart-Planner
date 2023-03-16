@@ -21,6 +21,7 @@ class PersonalizationScreen extends StatelessWidget {
               child: Icon(
                 Icons.arrow_back_ios,
                 color: Colors.black,
+                size: 20,
               ),
             ),
           ),
