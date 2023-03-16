@@ -94,6 +94,15 @@ class SubscriptionScreen extends StatelessWidget {
                         const EdgeInsets.only(left: 20, top: 40, right: 20),
                     margin: const EdgeInsets.symmetric(vertical: 15),
                     decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color.fromRGBO(0, 0, 0, 0.05),
+                            offset: Offset(
+                              0,
+                              4,
+                            ),
+                          )
+                        ],
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20)),
                     child: Text(

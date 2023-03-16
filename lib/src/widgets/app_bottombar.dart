@@ -254,7 +254,7 @@ class BottomBarInActiveItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox.fromSize(
-      size: const Size(kCircleRadius * 2, kCircleRadius * 2),
+      size: const Size(kCircleRadius * 2.4, kCircleRadius * 2),
       child: GestureDetector(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

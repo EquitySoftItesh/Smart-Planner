@@ -262,7 +262,7 @@ class VendorProfileScreen extends StatelessWidget {
                                             child: const Center(
                                                 child: Icon(
                                               Icons.arrow_right_alt,
-                                              size: 15,
+                                              size: 20,
                                             )),
                                           ),
                                         ],
