@@ -12,9 +12,11 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
+    print(Get.height);
+    print(Get.width);
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 35.0),
           child: Stack(
             alignment: Alignment.bottomCenter,
@@ -31,7 +33,9 @@ class SplashScreen extends StatelessWidget {
                         Center(
                           child: Image.asset(
                             _controller.onboardingPages[index].imageAssets,
-                            height: Get.height / 2,
+                            height: Get.height > 700
+                                ? Get.height / 2
+                                : Get.height / 2.5,
                           ),
                         ),
                         const SizedBox(height: 91),

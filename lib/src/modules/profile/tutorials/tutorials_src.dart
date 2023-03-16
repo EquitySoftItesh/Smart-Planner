@@ -38,6 +38,7 @@ class TutorialsScreen extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        physics: ScrollPhysics(),
         child: Column(
           children: [
             const SizedBox(
@@ -87,7 +88,7 @@ class TutorialsScreen extends StatelessWidget {
                     ),
                   );
                 },
-                itemCount: 5,
+                itemCount: 3,
               ),
             )
           ],

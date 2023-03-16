@@ -145,7 +145,8 @@ class EventScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(left: 20.0),
                             child: SizedBox(
-                              height: 220,
+                              // height: 220,
+                              height: Get.height > 700 ? 220 : 170,
                               child: GetBuilder<EventController>(
                                 init: EventController(),
                                 builder: (controller) {
@@ -161,8 +162,9 @@ class EventScreen extends StatelessWidget {
                                         child: Container(
                                           margin: const EdgeInsets.only(
                                               right: 10, bottom: 20),
-                                          width: 146,
-                                          height: 146,
+                                          // width: 50,
+                                          width: Get.height > 700 ? 146 : 100,
+                                          // height: 50,
                                           decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(50),
@@ -231,7 +233,8 @@ class EventScreen extends StatelessWidget {
                     ),
                     Positioned(
                       left: 0,
-                      bottom: -100,
+                      // bottom: -80,
+                      bottom: Get.height > 700 ? -110 : -85,
                       child: Image.asset(
                         'assets/eventdoodle2.png',
                         height: Get.height / 3.5,
@@ -241,350 +244,482 @@ class EventScreen extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 50,
+                // bottom: 50,
+                bottom: Get.height > 700 ? 50 : -10,
                 child: Container(
+                  height: Get.height > 700 ? null : Get.height / 2.3,
+                  // Get.height > 700 ? height: 200 : 300,
                   width: Get.width,
                   decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    // color: Colors.red,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30),
                     ),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 21.0, top: 30),
-                        child: Text(
-                          'Name of Event',
-                          style: GoogleFonts.raleway(
-                            textStyle: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              color: Color.fromRGBO(0, 125, 141, 1),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 21.0, top: 30),
+                          child: Text(
+                            'Name of Event',
+                            style: GoogleFonts.raleway(
+                              textStyle: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Color.fromRGBO(0, 125, 141, 1),
+                              ),
                             ),
+                            textAlign: TextAlign.start,
                           ),
-                          textAlign: TextAlign.start,
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                        child: TextFormField(
-                          style: GoogleFonts.raleway(
-                            textStyle: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          decoration: InputDecoration(
-                            hintText: 'Buttercup',
-                            hintStyle: GoogleFonts.raleway(
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, right: 20.0),
+                          child: TextFormField(
+                            style: GoogleFonts.raleway(
                               textStyle: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            disabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
-                            ),
-                            enabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
-                            ),
-                            border: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
-                            ),
-                            focusedBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
+                            decoration: InputDecoration(
+                              hintText: 'Buttercup',
+                              hintStyle: GoogleFonts.raleway(
+                                textStyle: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              disabledBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
+                              enabledBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
+                              border: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
+                              focusedBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 21.0, top: 25),
-                        child: Text(
-                          'Description',
-                          style: GoogleFonts.raleway(
-                            textStyle: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              color: Color.fromRGBO(0, 125, 141, 1),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 21.0, top: 25),
+                          child: Text(
+                            'Description',
+                            style: GoogleFonts.raleway(
+                              textStyle: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Color.fromRGBO(0, 125, 141, 1),
+                              ),
                             ),
+                            textAlign: TextAlign.start,
                           ),
-                          textAlign: TextAlign.start,
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                        child: TextFormField(
-                          style: GoogleFonts.raleway(
-                            textStyle: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          decoration: InputDecoration(
-                            hintText: 'Keeping It Fun Event Planning',
-                            hintStyle: GoogleFonts.raleway(
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(left: 20.0, right: 20.0),
+                          child: TextFormField(
+                            style: GoogleFonts.raleway(
                               textStyle: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            disabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
-                            ),
-                            enabledBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
-                            ),
-                            border: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
-                            ),
-                            focusedBorder: const UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color.fromRGBO(0, 125, 141, 0.25),
-                                  width: 1),
+                            decoration: InputDecoration(
+                              hintText: 'Keeping It Fun Event Planning',
+                              hintStyle: GoogleFonts.raleway(
+                                textStyle: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              disabledBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
+                              enabledBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
+                              border: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
+                              focusedBorder: const UnderlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Color.fromRGBO(0, 125, 141, 0.25),
+                                    width: 1),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 15.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 21.0, top: 10),
-                                    child: Text(
-                                      'Notification',
-                                      style: GoogleFonts.raleway(
-                                        textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color.fromRGBO(0, 125, 141, 1),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 15.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 21.0, top: 10),
+                                      child: Text(
+                                        'Notification',
+                                        style: GoogleFonts.raleway(
+                                          textStyle: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(0, 125, 141, 1),
+                                          ),
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20.0),
+                                      child: Obx(
+                                        () => DropdownButtonFormField(
+                                          icon: const Icon(
+                                            Icons.keyboard_arrow_down,
+                                            color: Color(0xFF007D8D),
+                                          ),
+                                          decoration: InputDecoration(
+                                            hintText:
+                                                'Keeping It Fun Event Planning',
+                                            hintStyle: GoogleFonts.raleway(
+                                              textStyle: const TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            disabledBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            enabledBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            border: const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            focusedBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                          ),
+                                          value: controller
+                                              .selectedNotification.value,
+                                          onChanged: (String? newValue) {
+                                            controller.selectedNotification
+                                                .value = newValue!;
+                                          },
+                                          items: controller.notification
+                                              .map<DropdownMenuItem<String>>(
+                                                  (String country) {
+                                            return DropdownMenuItem<String>(
+                                              value: country,
+                                              child: Text(
+                                                country,
+                                                style: GoogleFonts.raleway(
+                                                  textStyle: const TextStyle(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          }).toList(),
                                         ),
                                       ),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0),
-                                    child: Obx(
-                                      () => DropdownButtonFormField(
-                                        icon: const Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: Color(0xFF007D8D),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 21.0, top: 10),
+                                      child: Text(
+                                        'Type',
+                                        style: GoogleFonts.raleway(
+                                          textStyle: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(0, 125, 141, 1),
+                                          ),
                                         ),
-                                        decoration: InputDecoration(
-                                          hintText:
-                                              'Keeping It Fun Event Planning',
-                                          hintStyle: GoogleFonts.raleway(
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20.0),
+                                      child: Obx(
+                                        () => DropdownButtonFormField(
+                                          icon: const Icon(
+                                            Icons.keyboard_arrow_down,
+                                            color: Color(0xFF007D8D),
+                                          ),
+                                          decoration: InputDecoration(
+                                            hintText:
+                                                'Keeping It Fun Event Planning',
+                                            hintStyle: GoogleFonts.raleway(
+                                              textStyle: const TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            disabledBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            enabledBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            border: const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            focusedBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                          ),
+                                          value: controller.selectedType.value,
+                                          onChanged: (String? newValue) {
+                                            controller.selectedType.value =
+                                                newValue!;
+                                          },
+                                          items: controller.type
+                                              .map<DropdownMenuItem<String>>(
+                                                  (String country) {
+                                            return DropdownMenuItem<String>(
+                                              value: country,
+                                              child: Text(
+                                                country,
+                                                style: GoogleFonts.raleway(
+                                                  textStyle: const TextStyle(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
+                                                ),
+                                              ),
+                                            );
+                                          }).toList(),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 21.0, top: 10),
+                                      child: Text(
+                                        'Date',
+                                        style: GoogleFonts.raleway(
+                                          textStyle: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(0, 125, 141, 1),
+                                          ),
+                                        ),
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20.0),
+                                      child: Obx(
+                                        () => TextFormField(
+                                          decoration: InputDecoration(
+                                            hintText:
+                                                'Keeping It Fun Event Planning',
+                                            hintStyle: GoogleFonts.raleway(
+                                              textStyle: const TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            disabledBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            enabledBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            border: const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            focusedBorder:
+                                                const UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: Color.fromRGBO(
+                                                      0, 125, 141, 0.25),
+                                                  width: 1),
+                                            ),
+                                            suffixIcon: SizedBox(
+                                              height: 26,
+                                              width: 26,
+                                              child: Container(
+                                                decoration: BoxDecoration(
+                                                    color: const Color.fromRGBO(
+                                                        0, 188, 212, 1),
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5)),
+                                                margin:
+                                                    const EdgeInsets.all(10),
+                                                padding:
+                                                    const EdgeInsets.all(0),
+                                                alignment: Alignment.center,
+                                                child: IconButton(
+                                                  alignment: Alignment.center,
+                                                  icon: const Icon(
+                                                    Icons.calendar_today,
+                                                    color: Colors.white,
+                                                    size: 15,
+                                                  ),
+                                                  padding: EdgeInsets.zero,
+                                                  onPressed: () {
+                                                    _selectDate(context);
+                                                  },
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          style: GoogleFonts.raleway(
                                             textStyle: const TextStyle(
                                               fontSize: 15,
                                               fontWeight: FontWeight.w600,
                                             ),
                                           ),
-                                          disabledBorder:
-                                              const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                          enabledBorder:
-                                              const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                          border: const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                          focusedBorder:
-                                              const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
+                                          controller: TextEditingController(
+                                              text: controller.date.value !=
+                                                      null
+                                                  ? DateFormat('dd, MMMM')
+                                                      .format(
+                                                          controller.date.value)
+                                                  : null),
+                                          onTap: () {
+                                            _selectDate(context);
+                                          },
+                                          validator: (value) {
+                                            if (value!.isEmpty) {
+                                              return 'Please select a date';
+                                            }
+                                            return null;
+                                          },
                                         ),
-                                        value: controller
-                                            .selectedNotification.value,
-                                        onChanged: (String? newValue) {
-                                          controller.selectedNotification
-                                              .value = newValue!;
-                                        },
-                                        items: controller.notification
-                                            .map<DropdownMenuItem<String>>(
-                                                (String country) {
-                                          return DropdownMenuItem<String>(
-                                            value: country,
-                                            child: Text(
-                                              country,
-                                              style: GoogleFonts.raleway(
-                                                textStyle: const TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        }).toList(),
                                       ),
-                                    ),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 21.0, top: 10),
-                                    child: Text(
-                                      'Type',
-                                      style: GoogleFonts.raleway(
-                                        textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color.fromRGBO(0, 125, 141, 1),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 21.0, top: 10),
+                                      child: Text(
+                                        'Time',
+                                        style: GoogleFonts.raleway(
+                                          textStyle: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            color:
+                                                Color.fromRGBO(0, 125, 141, 1),
+                                          ),
                                         ),
+                                        textAlign: TextAlign.start,
                                       ),
-                                      textAlign: TextAlign.start,
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0),
-                                    child: Obx(
-                                      () => DropdownButtonFormField(
-                                        icon: const Icon(
-                                          Icons.keyboard_arrow_down,
-                                          color: Color(0xFF007D8D),
-                                        ),
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 20.0),
+                                      child: TextFormField(
+                                        controller:
+                                            controller.textEditingController,
                                         decoration: InputDecoration(
-                                          hintText:
-                                              'Keeping It Fun Event Planning',
-                                          hintStyle: GoogleFonts.raleway(
-                                            textStyle: const TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          disabledBorder:
-                                              const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                          enabledBorder:
-                                              const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                          border: const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                          focusedBorder:
-                                              const UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: Color.fromRGBO(
-                                                    0, 125, 141, 0.25),
-                                                width: 1),
-                                          ),
-                                        ),
-                                        value: controller.selectedType.value,
-                                        onChanged: (String? newValue) {
-                                          controller.selectedType.value =
-                                              newValue!;
-                                        },
-                                        items: controller.type
-                                            .map<DropdownMenuItem<String>>(
-                                                (String country) {
-                                          return DropdownMenuItem<String>(
-                                            value: country,
-                                            child: Text(
-                                              country,
-                                              style: GoogleFonts.raleway(
-                                                textStyle: const TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        }).toList(),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 21.0, top: 10),
-                                    child: Text(
-                                      'Date',
-                                      style: GoogleFonts.raleway(
-                                        textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color.fromRGBO(0, 125, 141, 1),
-                                        ),
-                                      ),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0),
-                                    child: Obx(
-                                      () => TextFormField(
-                                        decoration: InputDecoration(
-                                          hintText:
-                                              'Keeping It Fun Event Planning',
+                                          hintText: controller
+                                              .textEditingController
+                                              .toString(),
                                           hintStyle: GoogleFonts.raleway(
                                             textStyle: const TextStyle(
                                               fontSize: 15,
@@ -619,8 +754,8 @@ class EventScreen extends StatelessWidget {
                                                 width: 1),
                                           ),
                                           suffixIcon: SizedBox(
-                                            height: 26,
-                                            width: 26,
+                                            height: 23,
+                                            width: 23,
                                             child: Container(
                                               decoration: BoxDecoration(
                                                   color: const Color.fromRGBO(
@@ -628,18 +763,16 @@ class EventScreen extends StatelessWidget {
                                                   borderRadius:
                                                       BorderRadius.circular(5)),
                                               margin: const EdgeInsets.all(10),
-                                              padding: const EdgeInsets.all(0),
-                                              alignment: Alignment.center,
                                               child: IconButton(
-                                                alignment: Alignment.center,
                                                 icon: const Icon(
-                                                  Icons.calendar_today,
+                                                  Icons.access_time,
                                                   color: Colors.white,
                                                   size: 15,
                                                 ),
                                                 padding: EdgeInsets.zero,
                                                 onPressed: () {
-                                                  _selectDate(context);
+                                                  Get.find<EventController>()
+                                                      .pickTime();
                                                 },
                                               ),
                                             ),
@@ -651,131 +784,19 @@ class EventScreen extends StatelessWidget {
                                             fontWeight: FontWeight.w600,
                                           ),
                                         ),
-                                        controller: TextEditingController(
-                                            text: controller.date.value != null
-                                                ? DateFormat('dd, MMMM').format(
-                                                    controller.date.value)
-                                                : null),
-                                        onTap: () {
-                                          _selectDate(context);
-                                        },
-                                        validator: (value) {
-                                          if (value!.isEmpty) {
-                                            return 'Please select a date';
-                                          }
-                                          return null;
-                                        },
                                       ),
-                                    ),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 21.0, top: 10),
-                                    child: Text(
-                                      'Time',
-                                      style: GoogleFonts.raleway(
-                                        textStyle: const TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500,
-                                          color: Color.fromRGBO(0, 125, 141, 1),
-                                        ),
-                                      ),
-                                      textAlign: TextAlign.start,
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 20.0),
-                                    child: TextFormField(
-                                      controller:
-                                          controller.textEditingController,
-                                      decoration: InputDecoration(
-                                        hintText: controller
-                                            .textEditingController
-                                            .toString(),
-                                        hintStyle: GoogleFonts.raleway(
-                                          textStyle: const TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                        disabledBorder:
-                                            const UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Color.fromRGBO(
-                                                  0, 125, 141, 0.25),
-                                              width: 1),
-                                        ),
-                                        enabledBorder:
-                                            const UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Color.fromRGBO(
-                                                  0, 125, 141, 0.25),
-                                              width: 1),
-                                        ),
-                                        border: const UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Color.fromRGBO(
-                                                  0, 125, 141, 0.25),
-                                              width: 1),
-                                        ),
-                                        focusedBorder:
-                                            const UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                              color: Color.fromRGBO(
-                                                  0, 125, 141, 0.25),
-                                              width: 1),
-                                        ),
-                                        suffixIcon: SizedBox(
-                                          height: 23,
-                                          width: 23,
-                                          child: Container(
-                                            decoration: BoxDecoration(
-                                                color: const Color.fromRGBO(
-                                                    0, 188, 212, 1),
-                                                borderRadius:
-                                                    BorderRadius.circular(5)),
-                                            margin: const EdgeInsets.all(10),
-                                            child: IconButton(
-                                              icon: const Icon(
-                                                Icons.access_time,
-                                                color: Colors.white,
-                                                size: 15,
-                                              ),
-                                              padding: EdgeInsets.zero,
-                                              onPressed: () {
-                                                Get.find<EventController>()
-                                                    .pickTime();
-                                              },
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      style: GoogleFonts.raleway(
-                                        textStyle: const TextStyle(
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                    ],
+                        const SizedBox(
+                          height: 20,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               )
