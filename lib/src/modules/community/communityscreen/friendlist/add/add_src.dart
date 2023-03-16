@@ -143,6 +143,8 @@ class MyDialogBox extends StatelessWidget {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
+                                shadowColor: Colors.transparent,
+                                splashFactory: NoSplash.splashFactory,
                                 primary: const Color.fromRGBO(0, 0, 0, 0.2),
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(
@@ -167,6 +169,8 @@ class MyDialogBox extends StatelessWidget {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
+                                shadowColor: Colors.transparent,
+                                splashFactory: NoSplash.splashFactory,
                                 elevation: 0,
                                 primary: const Color.fromRGBO(0, 188, 212, 1),
                                 shape: RoundedRectangleBorder(

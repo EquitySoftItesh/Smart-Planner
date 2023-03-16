@@ -133,7 +133,7 @@ class CommunityTabScreen extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Post & Chat',
+                      '20 sep, 2022',
                       style: GoogleFonts.raleway(
                         textStyle: const TextStyle(
                           fontSize: 10,

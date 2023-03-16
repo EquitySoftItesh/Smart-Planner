@@ -114,42 +114,46 @@ class CreateGroupScreen extends StatelessWidget {
                 Expanded(
                   child: SizedBox(
                     height: 50,
-                    child: TextFormField(
-                      textAlign: TextAlign.start,
-                      style: GoogleFonts.raleway(
-                        textStyle: const TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      decoration: InputDecoration(
-                        hintStyle: GoogleFonts.raleway(
+                    child: Material(
+                      elevation: 1,
+                      borderRadius: BorderRadius.circular(7),
+                      child: TextFormField(
+                        textAlign: TextAlign.start,
+                        style: GoogleFonts.raleway(
                           textStyle: const TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        disabledBorder: OutlineInputBorder(
+                        decoration: InputDecoration(
+                          hintStyle: GoogleFonts.raleway(
+                            textStyle: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          disabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.white, width: 0),
+                              borderRadius: BorderRadius.circular(10)),
+                          enabledBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.white, width: 0),
+                              borderRadius: BorderRadius.circular(10)),
+                          border: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.white, width: 0),
+                              borderRadius: BorderRadius.circular(10)),
+                          focusedBorder: OutlineInputBorder(
                             borderSide:
                                 const BorderSide(color: Colors.white, width: 0),
-                            borderRadius: BorderRadius.circular(10)),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(color: Colors.white, width: 0),
-                            borderRadius: BorderRadius.circular(10)),
-                        border: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(color: Colors.white, width: 0),
-                            borderRadius: BorderRadius.circular(10)),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(color: Colors.white, width: 0),
-                          borderRadius: BorderRadius.circular(10.0),
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          contentPadding: const EdgeInsets.only(left: 20),
+                          hintText: 'Group name',
+                          fillColor: Colors.white,
+                          filled: true,
                         ),
-                        contentPadding: const EdgeInsets.only(left: 20),
-                        hintText: 'Group name',
-                        fillColor: Colors.white,
-                        filled: true,
                       ),
                     ),
                   ),

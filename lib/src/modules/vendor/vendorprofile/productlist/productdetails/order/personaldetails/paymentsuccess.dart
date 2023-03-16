@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:smartplanner/src/modules/dashboard/dashboard_src.dart';
+import 'package:smartplanner/src/modules/home/home_src.dart';
 import 'package:smartplanner/src/modules/vendor/vendor_src.dart';
 
 import '../../../../../../../widgets/ColorsSchemes.dart';
@@ -55,7 +57,7 @@ class PaymentSuccessScreen extends StatelessWidget {
               width: Get.width,
               child: ElevatedButton(
                 onPressed: () {
-                  Get.off(VendorScreen());
+                  Get.off(HomeScreen());
                 },
                 style: ElevatedButton.styleFrom(
                   primary: AppColor.buttonColor,

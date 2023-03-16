@@ -269,7 +269,7 @@ class ChatDetailScreen extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   child: Container(
                     margin: const EdgeInsets.only(left: 20.0),
-                    height: 53,
+                    height: 70,
                     width: 150,
                     padding: const EdgeInsets.symmetric(
                         vertical: 14, horizontal: 16),

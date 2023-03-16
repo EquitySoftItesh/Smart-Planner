@@ -24,6 +24,7 @@ class EventScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(Get.height);
     Get.put(EventController());
     return SafeArea(
       child: Scaffold(
@@ -245,9 +246,9 @@ class EventScreen extends StatelessWidget {
               ),
               Positioned(
                 // bottom: 50,
-                bottom: Get.height > 700 ? 50 : -10,
+                bottom: Get.height < 900 ? 15 : null,
                 child: Container(
-                  height: Get.height > 700 ? null : Get.height / 2.3,
+                  height: Get.height < 900 ? Get.height / 2.3 : null,
                   // Get.height > 700 ? height: 200 : 300,
                   width: Get.width,
                   decoration: const BoxDecoration(
